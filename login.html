@@ -53,6 +53,22 @@
 
     z-index: -1;
   }
+
+  .forgot-pass:hover{
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  input[type="password"]::placeholder {
+  color: #dad7d7; /* Light black color (dark grey) */
+  opacity: 1; /* Ensure the color is not affected by opacity */
+}
+
+input[type="email"]::placeholder {
+  color: #dad7d7; /* Light black color (dark grey) */
+  opacity: 1; /* Ensure the color is not affected by opacity */
+}
+
 </style>
 
 
@@ -117,22 +133,24 @@
   <div class="form-popup">
     <div class="form-box">
       <div class="form-details" data-aos="zoom-in-down" >
-        <h1>welcome back</h1>
+        <h1>Welcome Back</h1>
 
       </div>
       <div class="form-content">
         <h2>LOGIN</h2>
         <form action="#">
-          <div class="input-field">
-            <input type="text">
-            <label style="background-color: transparent; color: white;">Email</label>
+          <label style="background-color: transparent; color: white;">Email</label>
+
+          <div class="input-field"  >
+            <input type="email" required placeholder="Enter your Email Here " >
           </div>
+          <label style="background-color: transparent; color: white;">Password</label>
           <div class="input-field">
-            <input type="password">
-            <label style="background-color: transparent; color: white;">Password</label>
+           
+            <input type="password"required placeholder="Enter your Password Here " >
           </div>
           <a href="reset_password.html" class="forgot-pass">Forgot password</a>
-          <button type="submit">
+          <button type="submit" style="" >
             <a style="text-decoration: none; color: white;" href="./index.html">
               Log In</a></button>
         </form>
